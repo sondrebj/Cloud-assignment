@@ -5,7 +5,7 @@ import vobject # use this to read vcard file
 from flask import Flask, request, jsonify, send_file, Response, render_template
 from database import get_database
 from bson import ObjectId
-app = Flask(__name__, template_folder='../flask/public')
+app = Flask(__name__, template_folder='/public')
 
 
 
