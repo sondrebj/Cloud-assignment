@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud-Technologies. Assignment 1</title>
+</head>
+<body>
+
+    <h1>This is our API that is created with Python and it handles POST and GET requests with our database</h1>
+
+    <p>Below i will give a short explaination of the different Routes one can use.</p>
+
+    <ul>
+
+        <li><address>/contacts</address>This will send a GET request to our database and it will display all the data in the database on the webpage as .json</li>
+        <li><address>/contacts/vcard</address>This will send a GET request to our database and it will display all the data in the database on the webpage as .vcf format</li>
+        <li><address>/contacts/vcard/json</address>This will send a GET request to our database and it will display all the data in the database on the webpage as .vcf format inside a .json structure</li>
+        <li><address>/contacts/vcard/download</address>This will send a GET request to our database, and you can download all the data in our database as a .vcf file</li>
+
+        <li><address>/contacts/id</address>This will send a GET request to our database and it will display the data associated with that id on the webpage as .json</li>
+        <li><address>/contacts/id/vcard</address>This will send a GET request to our database and it will display the data associated with that id on the webpage as .vcf format</li>
+
+        <li><address>/contacts/id/vcard/json</address>This will send a GET request to our database and it will display the data associated with that id on the webpage as .vcf format inside a .json structure</li>
+
+        <li><address>/upload.html</address>This will send a GET request returning the upload.html file, where there is a form that the user is suppose to upload a .vcf file. 
+            When the user uploaded a .vcf file and when the user has submitted that file, the API send a POST request to the database adding the data in the .vcf file to the database.</li>
+
+    </ul>
+
+    <style>
+        li{
+            padding: 5px;
+        }
+    </style>
+    
+</body>
+</html>
