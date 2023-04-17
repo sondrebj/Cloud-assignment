@@ -35,7 +35,11 @@ def upload_vcard():
 
             address = ""
             try:
-                address = str(vcard.adr.value)
+                address = '; '.join([vcard.adr.value.street, 
+                                     vcard.adr.value.city, 
+                                     vcard.adr.value.region, 
+                                     vcard.adr.value.code, 
+                                     vcard.adr.value.country])
             except AttributeError:
                 pass
 
