@@ -5,7 +5,7 @@ import vobject # use this to read vcard file
 from flask import Flask, request, jsonify, send_file, Response, render_template
 from database import get_database
 from bson import ObjectId
-app = Flask(__name__, template_folder='./public')
+app = Flask(__name__, template_folder='public')
 
 
 
@@ -107,8 +107,8 @@ def get_by_id_json(id):
     if result is None: # if no data based on id then display this msg
         return jsonify({'error': 'Data not found'}), 404
     result['_id'] = str(result['_id'])
-   # return jsonify(result)
-    return render_template('test.html', result=result)
+    return jsonify(result)
+   # return render_template('test.html', result=result)
 
 
 
