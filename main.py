@@ -3,9 +3,26 @@
 import os
 import vobject # use this to read vcard file
 from flask import Flask, request, jsonify, send_file, Response, render_template
-from database import get_database
 from bson import ObjectId
+from pymongo import MongoClient #import our MongoDB client
 app = Flask(__name__, template_folder='public')
+
+
+### DATABASE
+
+
+def get_database(): #function to get the database 
+    CONNECTION_STRING = "mongodb+srv://mathiakk:123@cluster0.qalzrkm.mongodb.net/test" #we connect to our DB
+    client = MongoClient(CONNECTION_STRING) #we create a client with our connection string
+    db = client["Cloud-technologies"] #we create a database called "Cloud-technologies, if it doesnt already exist"
+    return db["contacts"]
+
+# here we try to access our database, and if its a success it prints a msg
+try: 
+    db = get_database() #we try to get the database
+    print("Database connection established")
+except: # if not success print this msg
+    print("Database connection failed") 
 
 
 
