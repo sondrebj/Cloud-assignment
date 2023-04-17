@@ -1,6 +1,4 @@
-# flask
-A minimal Flask web application.
+# Flask - api
+This api is deployed on railway, and can be accessed using the url: "https://flask-production-5a289.up.railway.app/".
 
-For a step-by-step guide to deploying on [Railway](https://railway.app/?referralCode=alphasec), see [this](https://alphasec.io/how-to-deploy-a-python-flask-app-on-railway/) post, or click the button below.
-
-[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template/igzwwg?referralCode=alphasec)
+There you will find the index page, and everything you need to know about the way the api works is written there. Basically all the routes that are accesible. 

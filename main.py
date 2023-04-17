@@ -11,7 +11,7 @@ app = Flask(__name__, template_folder='public')
 
 @app.route('/')
 def index():
-    return 'Welcome to the VCard App! To access the .html pages type in /upload.html or /contacts. Go to /upload.html to upload a .vcf file. And /contacts to see all the data in the database.'
+    return render_template('index.html')
 
 # route that handles the upload functioanlity. changes the content to .json from .vcf format and sends it to the database
 @app.route('/upload.html', methods=['GET', 'POST'])
